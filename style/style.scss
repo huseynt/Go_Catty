@@ -1,0 +1,300 @@
+@import 'extend';
+
+body {
+    background-color: #e2e2e2;
+    height: 2000px;
+}
+body:has(.headerDropMenu:hover) .downBlock {
+    display: flex !important;
+}
+// header-----------------------------------------
+.header {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+
+    // header left -------------------------
+    &_left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+        &-item {
+            padding: 15px 0;
+            @extend %font_s;
+            color: #00000084;
+            &:hover {
+                transition: 0.2s linear;
+                color: #000000c0;
+            }
+            &-photo-img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        #HeaderLogo {
+            padding: 10px 0 !important;
+            display: flex;
+            align-items: center;
+            font-size: 22px !important;
+            font-weight: 700 !important;
+            color: #000000;
+        } 
+    }
+    // header right -----------------------
+    &_right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+        &-item {
+            @extend %font_s;
+            color: #00000084;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            padding: 15px 0;
+            &:hover {
+                transition: 0.2s linear;
+                color: #000000c0;
+            }
+            &-down-icon {
+                width: 25px;
+                height: 25px;
+            }
+            &-img {
+                width: 25px;
+                height: 21px;
+                opacity: 0.7;
+            }
+            &-downBlock {
+                width: 85px;
+                display: none !important;
+                position: absolute;
+                top: 57px;
+                left: -15px;
+                padding: 12px 20px;
+                background-color: #ffffff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 10px;
+                border-radius: 0 0 15px 15px;
+                border: 1px solid #00000079;
+                border-top: 1px solid #ffffff00;
+                box-shadow: 0 9px 7px 2px #00000016;
+                &-link {
+                    @extend %font_s;
+                    color: #00000084;
+                    &:hover {
+                        transition: 0.2s linear;
+                        color: #000000c0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  domain search section ------------------------------------------------------
+.domainSeach {
+    padding: 17px 5%;
+    margin-top: 57px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    background-color: #fff;
+
+    &-search {
+        display: flex;
+        justify-content: space-between;
+
+        &-input {
+            width: 100%;
+            padding: 12px 8px;
+            margin: .5px;
+            border: none;
+            background-color: #b9b9b933;
+            @extend %font_sm_h;
+
+            &:focus {
+                outline: 1px solid #06a8b468;
+            }
+        }
+        &-btn {
+            width: 150px;
+            padding: 12px 8px;
+            margin: 0;
+            border: none;
+            background-color: #02828c;
+            color: white;
+            font-weight: 600;
+            @extend %font_s;
+        }
+    }
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 20px;
+
+        &-item {
+            display: flex;
+            align-items: end;
+            height: 15px;
+            @extend %font_ss;
+
+
+            &-img {
+                margin-right: 4px;
+                width: 29px;
+            }
+        }
+    }
+} 
+//  get started / find domain --------------------------------------------------------
+.getStarted {
+    padding: 5px 5% 10px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    background-color: #fff;
+
+
+    &-left {
+        padding: 0 0 70px 5%;
+        background-color: #105f64;
+        margin-right: 15px;
+        border-radius: 5px;
+        background: url('../assets/handmade.jpg');
+        background-position: 50% 65%;
+        background-size: cover;
+
+        &-up {
+            margin-top: 75px;
+            @extend %font_sm;
+        }
+        &-head {
+            margin-top: 15px;
+            max-width: 340px;
+            @extend %font_xxl;
+        }
+        &-info {
+            margin-top: 15px;
+            @extend %font_s_h;
+        }
+        &-buttons {
+            margin-top: 15px;
+
+            &-start {
+                @extend %button;
+            }
+            &-learn {
+                @extend %button_w;
+            }
+        }
+        &-required {
+            margin-top: 10px;
+            @extend %font_ss;
+        }
+    }
+
+    &-right {
+        padding: 0 0 70px 5%;
+        background-color: #d8efee;
+        border-radius: 5px;
+
+        &-up {
+            margin-top: 75px;
+            @extend %font_sm;
+        }
+        &-head {
+            margin-top: 15px;
+            max-width: 300px;
+            @extend %font_xl;
+        }
+        &-info {
+            margin-top: 20px;
+            @extend %font_s_h;
+        }
+        &-find {
+            margin-top: 10px;
+            @extend %button;
+        }
+        &-option {
+            margin-top: 15px;
+            @extend %font_sm_h;
+        }
+        &-offer {
+            margin-top: 10px;
+            @extend %font_ss;
+        }
+    }
+}
+// Services section --------------------------------------
+.services {
+    padding: 15px 5%;
+    background-color: #fff;
+
+    &-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        &-row {
+            &-td {
+                padding: 15px 0;
+                border: 1px solid #0000002c;
+                text-align: center;
+                @extend %font_sm_h;
+
+                &-img {
+                    width: 100px;
+                }
+            }
+            .rowspan {
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #bgText {
+//     margin: 150px auto;
+//     text-align: center;
+//     font-family: "Poppins";
+//     font-weight: 700;
+//     font-size: 60px;
+//     background: url("../assets/bgWallpaper.jpg");
+//     background-size: contain;
+//     background-clip: text;
+//     color: transparent;
+// }
