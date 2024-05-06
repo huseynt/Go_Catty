@@ -179,6 +179,7 @@ body:has(.headerDropMenu:hover) .downBlock {
   margin: 0.5px;
   border: none;
   background-color: rgba(185, 185, 185, 0.2);
+  border-radius: 3px 0 0 3px;
 }
 .domainSeach-search-input:focus {
   outline: 1px solid rgba(6, 168, 180, 0.4078431373);
@@ -191,6 +192,7 @@ body:has(.headerDropMenu:hover) .downBlock {
   background-color: #02828c;
   color: white;
   font-weight: 600;
+  border-radius: 0 3px 3px 0;
 }
 .domainSeach-list {
   display: flex;
