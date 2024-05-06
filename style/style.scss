@@ -1,8 +1,8 @@
 @import 'extend';
 
 body {
-    background-color: #e2e2e2;
-    height: 2000px;
+    background-color: #ffffff;
+    height: 3000px;
 }
 body:has(.headerDropMenu:hover) .downBlock {
     display: flex !important;
@@ -14,7 +14,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
 
@@ -108,7 +108,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     margin-top: 57px;
     display: grid;
     grid-template-columns: 5fr 2fr;
-    background-color: #fff;
+    background-color: #ffffff00;
 
     &-search {
         display: flex;
@@ -162,7 +162,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     padding: 5px 5% 10px;
     display: grid;
     grid-template-columns: 5fr 2fr;
-    background-color: #fff;
+    background-color: #ffffff00;
 
 
     &-left {
@@ -238,7 +238,7 @@ body:has(.headerDropMenu:hover) .downBlock {
 // Services section --------------------------------------
 .services {
     padding: 15px 5%;
-    background-color: #fff;
+    background-color: #ffffff00;
 
     &-table {
         width: 100%;
@@ -261,8 +261,64 @@ body:has(.headerDropMenu:hover) .downBlock {
         }
     }
 }
+//  success section -------------------------------------
+.success {
+    width: 100%;
+    height: 700px;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 60px;
+    justify-content: center;
+
+    .grida {
+        margin-top: 70px;
+        grid-area: 2 / 1 / span 2 / span 1;
+    }
+    .gridb {
+        grid-area: 1 / 2 / span 2 / span 1;
+        
+    }
+    .gridc {
+        grid-area: 3 / 2 / span 2 / span 1;
+    }
 
 
+
+    &-head {
+        width: 100%;
+        @extend %font_xxl;
+        height: 250px;
+    }
+    &-block {
+        height: 700px;
+        max-width: 400px;
+        margin-bottom: 45px;
+        &-photo {
+            &-img {
+                width: 100%;
+                height: 500px;
+                border-radius: 12px;
+            }
+        }
+        
+        &-head {
+            @extend %font_m;
+        }
+        &-info {
+            @extend %font_s_h;
+        }
+        &-buttons {
+
+            &-start {
+                @extend %button;
+            }
+            &-learn {
+                @extend %button_w;
+            }
+        }
+    }
+}
 
 
 
