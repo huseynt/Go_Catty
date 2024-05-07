@@ -56,6 +56,13 @@
     border: none;
     border-radius: 7px;
     cursor: pointer;
+
+    &:hover {
+        background-color: #ffffff;
+        color: black;
+        border: .5px solid #000;
+        padding: 10px 34px;
+    }
 }
 %button_w {
     padding: 10px 15px;

@@ -4,7 +4,7 @@
   font-weight: 600;
 }
 
-.domainSeach-search-btn, .header_right-item-downBlock-link, .header_right-item, .header_left-item, .success-block-buttons-start, .getStarted-right-find, .getStarted-left-buttons-start {
+.domainSeach-search-btn, .header_right-item-downBlock-link, .header_right-item, .header_left-item, .template-btn, .success-block-buttons-start, .getStarted-right-find, .getStarted-left-buttons-start {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -22,7 +22,7 @@
   font-weight: 600;
 }
 
-.services-table-row-td, .getStarted-right-option, .domainSeach-search-input {
+.template-info, .services-table-row-td, .getStarted-right-option, .domainSeach-search-input {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -40,7 +40,7 @@
   font-weight: 600;
 }
 
-.success-head, .getStarted-left-head {
+.template-head, .success-head, .getStarted-left-head {
   font-family: "Poppins", sans-serif;
   font-size: 38px;
   font-weight: 600;
@@ -48,13 +48,19 @@
   line-height: 1.3;
 }
 
-.success-block-buttons-start, .getStarted-right-find, .getStarted-left-buttons-start {
+.template-btn, .success-block-buttons-start, .getStarted-right-find, .getStarted-left-buttons-start {
   padding: 10px 35px;
   background-color: black;
   color: white;
   border: none;
   border-radius: 7px;
   cursor: pointer;
+}
+.template-btn:hover, .success-block-buttons-start:hover, .getStarted-right-find:hover, .getStarted-left-buttons-start:hover {
+  background-color: #ffffff;
+  color: black;
+  border: 0.5px solid #000;
+  padding: 10px 34px;
 }
 
 .success-block-buttons-learn, .getStarted-left-buttons-learn {
@@ -288,7 +294,7 @@ body:has(.headerDropMenu:hover) .downBlock {
 
 .success {
   width: 100%;
-  height: 700px;
+  height: auto;
   padding: 0 5%;
   display: grid;
   grid-template-columns: auto auto;
@@ -318,4 +324,32 @@ body:has(.headerDropMenu:hover) .downBlock {
   width: 100%;
   height: 500px;
   border-radius: 12px;
+}
+.template {
+  padding: 50px 5%;
+  height: auto;
+  background-color: transparent;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.0745098039);
+}
+.template-block {
+  display: flex;
+  column-gap: 25px;
+  margin: 30px 0;
+  justify-content: center;
+}
+.template-block-item {
+  width: 18%;
+  height: 350px;
+  background: url("../assets/card_bg.jpeg");
+  background-position: 87% 47%;
+  background-size: 950px;
+  border-radius: 10px;
+  transition: 0.8s;
+}
+.template-block .activeItem {
+  width: 40%;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
