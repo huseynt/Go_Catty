@@ -20,6 +20,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     position: fixed;
     border-bottom: 1px solid #00000016;
     top: 0;
+    z-index:999;
 
     // header left -------------------------
     &_left {
