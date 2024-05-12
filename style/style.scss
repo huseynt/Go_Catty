@@ -1,5 +1,7 @@
 @import 'extend';
-
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #ffffff;
     height: 3000px;
@@ -16,6 +18,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     align-items: center;
     background-color: #ffffff;
     position: fixed;
+    border-bottom: 1px solid #00000016;
     top: 0;
 
     // header left -------------------------
@@ -79,16 +82,16 @@ body:has(.headerDropMenu:hover) .downBlock {
                 position: absolute;
                 top: 57px;
                 left: -15px;
-                padding: 12px 20px;
+                padding: 12px 20px 18px;
                 background-color: #ffffff;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 row-gap: 10px;
                 border-radius: 0 0 15px 15px;
-                border: 1px solid #00000079;
+                border: 1px solid #00000016;
                 border-top: 1px solid #ffffff00;
-                box-shadow: 0 9px 7px 2px #00000016;
+                box-shadow: 0 9px 7px 2px #0000000e;
                 &-link {
                     @extend %font_s;
                     color: #00000084;
@@ -124,19 +127,11 @@ body:has(.headerDropMenu:hover) .downBlock {
             @extend %font_sm_h;
 
             &:focus {
-                outline: 1px solid #06a8b468;
+                outline: .5px solid #06a8b468;
             }
         }
         &-btn {
-            width: 150px;
-            padding: 12px 8px;
-            margin: 0;
-            border: none;
-            background-color: #02828c;
-            color: white;
-            font-weight: 600;
-            border-radius: 0 3px 3px 0;
-            @extend %font_s;
+            @extend %button_search;
         }
     }
     &-list {
@@ -169,12 +164,16 @@ body:has(.headerDropMenu:hover) .downBlock {
 
     &-left {
         padding: 0 0 70px 5%;
-        background-color: #105f64;
         margin-right: 15px;
-        border-radius: 5px;
+        border-radius: 7px;
         background: url('../assets/handmade.jpg');
         background-position: 50% 65%;
         background-size: cover;
+        &:hover {
+            transition: .2s linear;
+            filter:grayscale(80%);
+        }
+
 
         &-up {
             margin-top: 75px;
@@ -208,7 +207,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     &-right {
         padding: 0 0 70px 5%;
         background-color: #d8efee;
-        border-radius: 5px;
+        border-radius: 7px;
 
         &-up {
             margin-top: 75px;
@@ -240,6 +239,7 @@ body:has(.headerDropMenu:hover) .downBlock {
 // Services section --------------------------------------
 .services {
     padding: 15px 5%;
+    margin: 20px 0;
     background-color: #ffffff00;
 
     &-table {
@@ -268,6 +268,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     width: 100%;
     height: auto;
     padding: 0 5%;
+    margin: 45px 0 0;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 60px;
@@ -324,7 +325,7 @@ body:has(.headerDropMenu:hover) .downBlock {
 
 // template section --------------------------------
 .template {
-    padding: 50px 5%;
+    padding: 50px 1%;
     height: auto;
     background-color: transparent;
     text-align: center;
@@ -339,21 +340,22 @@ body:has(.headerDropMenu:hover) .downBlock {
     &-block {
         display: flex;
         column-gap: 25px;
-        margin: 30px 0;
+        margin: 30px auto;
+        max-width: 1100px;
         justify-content: center;
         
 
         &-item {
-            width: 18%;
+            width: 16%;
             height: 350px;
             background: url('../assets/card_bg.jpeg');
-            background-position: 87% 47%;
+            background-position: 83.7% 47%;
             background-size: 950px;
             border-radius: 10px;
             transition: .8s;
         }
         .activeItem {
-            width: 40%;
+            width: 47%;
             height: 350px;
             background-position: center;
             background-size: cover;
