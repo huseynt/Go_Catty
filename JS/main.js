@@ -21,13 +21,3 @@ function growItem() {
     }
     i++
 }
-
-
-
-
-
-
-const API_KEY = '9dy6wZLIwerIeTBrgLNZD3WGitRWIKVKzjGXkbzx';
-fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
-  .then(response => response.json())
-  .then(data => console.log(data.explanation.length))

@@ -354,19 +354,68 @@ body:has(.headerDropMenu:hover) .downBlock {
             background-size: 950px;
             border-radius: 10px;
             transition: .8s;
+            aspect-ratio: 1/2;   // 175px / 350px
+
         }
         .activeItem {
             width: 47%;
             height: 350px;
             background-position: center;
             background-size: cover;
+            aspect-ratio: 3/2; //  500px / 350px
         }
     }
     &-btn {
         @extend %button;
     }
 }
+// footer -------------------------------------------
+.footer {
+    height: 500px;
+    padding: 0 5%;
+    background-color: #000000;
 
+    &-up {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        &-left {
+            @extend %font_sm_h;
+            color:white;
+
+            &-form {
+                display: flex;
+                position: relative;
+
+
+                &-text {
+                    width: 100%;
+                    padding: 13.5px 8px;
+                    color: #ffffff;
+                    background-color: #414141;
+                    border: none;
+                    border-radius: 0 7px 7px 0;
+                    box-sizing: unset;
+
+                    &::placeholder {
+                        color:white;
+                    }
+                    &:focus {
+                        background-color: #000000;
+                        outline: 1.5px solid #00a4af;
+                        &::placeholder {
+                            color:#00a4af;
+                        }
+                    }
+                }
+                &-btn {
+                    @extend %button_footer;
+                }
+            }
+        }
+    }
+}
 
 
 

@@ -89,3 +89,24 @@
         background-color: #00a4af;
     }
 }
+%button_footer {
+    width: 150px;
+    height: 100%;
+    padding: 10px 8px;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    border: none;
+    border-radius: 0 7px 7px 0;
+    @extend %font_s;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:hover {
+        transition: .15s linear;
+        background-color: #222222;
+        color: #ffffff;
+    }
+}
