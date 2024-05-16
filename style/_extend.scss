@@ -1,3 +1,28 @@
+// logo -------------------------
+%logo {
+    padding: 10px 0 !important;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    @extend %font_sm;
+    &:hover {
+        transition: 0.2s linear;
+        color: #000000c0;
+    }
+}
+
+%logo_big {
+    border-radius: 7px 0 7px 0;
+    padding: 6.5px 5px 6.5px;
+    display: flex;
+    align-items: center;
+    &:hover {
+        transition: 0.2s linear;
+    }
+}
+
 // fonts ------------------------
 %font_ss {
     font-family: "Poppins", sans-serif;
@@ -94,19 +119,19 @@
     height: 100%;
     padding: 10px 8px;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #8e8e8e;
     color: #000000;
     font-weight: 600;
     border: none;
     border-radius: 0 7px 7px 0;
-    @extend %font_s;
+    @extend %font_sm_h;
     position: absolute;
     right: 0;
     top: 0;
 
     &:hover {
         transition: .15s linear;
-        background-color: #222222;
-        color: #ffffff;
+        background-color: #006f77;
+        color: #ffffff83;
     }
 }

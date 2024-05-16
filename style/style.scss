@@ -28,6 +28,15 @@ body:has(.headerDropMenu:hover) .downBlock {
         justify-content: space-between;
         align-items: center;
         column-gap: 15px;
+
+        &-logo {
+            @extend %logo;
+            &-icon {
+                width: 30px;
+                height: 30px;
+            }
+        } 
+
         &-item {
             padding: 15px 0;
             @extend %font_s;
@@ -36,19 +45,7 @@ body:has(.headerDropMenu:hover) .downBlock {
                 transition: 0.2s linear;
                 color: #000000c0;
             }
-            &-photo-img {
-                width: 30px;
-                height: 30px;
-            }
         }
-        #HeaderLogo {
-            padding: 10px 0 !important;
-            display: flex;
-            align-items: center;
-            font-size: 22px !important;
-            font-weight: 700 !important;
-            color: #000000;
-        } 
     }
     // header right -----------------------
     &_right {
@@ -372,38 +369,44 @@ body:has(.headerDropMenu:hover) .downBlock {
 // footer -------------------------------------------
 .footer {
     height: 500px;
-    padding: 0 5%;
+    padding: 20px 5% 0;
     background-color: #000000;
 
+    // ------------------- up --------------------------
     &-up {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: 3fr 2fr;
+        column-gap: 35px;
+        padding: 0 0 35px 0;
+        border-bottom: 1px solid #ffffff1f;
+
 
         &-left {
-            @extend %font_sm_h;
-            color:white;
+
+            &-head {
+                @extend %font_sm_h;
+                color: #fff;
+            }
 
             &-form {
                 display: flex;
                 position: relative;
-
-
                 &-text {
                     width: 100%;
                     padding: 13.5px 8px;
                     color: #ffffff;
-                    background-color: #414141;
+                    background-color: #1b1b1b;
                     border: none;
-                    border-radius: 0 7px 7px 0;
+                    border-radius: 3px 7px 7px 3px;
                     box-sizing: unset;
-
+                    @extend %font_sm_h;
                     &::placeholder {
                         color:white;
                     }
                     &:focus {
                         background-color: #000000;
-                        outline: 1.5px solid #00a4af;
+                        outline: 1.5px solid #00a3af55;
                         &::placeholder {
                             color:#00a4af;
                         }
@@ -411,6 +414,50 @@ body:has(.headerDropMenu:hover) .downBlock {
                 }
                 &-btn {
                     @extend %button_footer;
+                }
+            }
+        }
+
+        &-right {
+            padding: 0 0 0 20px;
+
+            &-head {
+                @extend %font_sm_h;
+                margin: 15px 0 15px;
+                color: #fff;
+            }
+            &-block {
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+                height: 49.72px;
+
+                &-logo {
+                    @extend %logo_big;
+                    &-icon-img {
+                        filter: invert(100%);
+                        width: 33px;
+                        height: 33px;
+                    }
+                    &-text {
+                        @extend %font_xl;
+                        background-image: linear-gradient(#00a4af, #fff);
+                        background-clip: text;
+                        background-size: cover;
+                        color: transparent;
+                    }
+                } 
+                &-info {
+                    padding: 2px;
+                    margin: 0 5px 0 0;
+                    @extend %font_sm_h;
+                    color: #fff;
+                }
+                &-forward {
+                    transform: rotate(-90deg);
+                    width: 49px;
+                    height: 70px;
+                    margin: 0;
                 }
             }
         }
