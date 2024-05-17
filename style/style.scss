@@ -1,4 +1,6 @@
 @import 'extend';
+@import 'variable';
+
 * {
     box-sizing: border-box;
 }
@@ -16,7 +18,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: $bg;
     position: fixed;
     border-bottom: 1px solid #00000016;
     top: 0;
@@ -40,7 +42,7 @@ body:has(.headerDropMenu:hover) .downBlock {
         &-item {
             padding: 15px 0;
             @extend %font_s;
-            color: #00000084;
+            color: $font_s_soft;
             &:hover {
                 transition: 0.2s linear;
                 color: #000000c0;
@@ -55,7 +57,7 @@ body:has(.headerDropMenu:hover) .downBlock {
         column-gap: 15px;
         &-item {
             @extend %font_s;
-            color: #00000084;
+            color: $font_s_soft;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -109,7 +111,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     margin-top: 57px;
     display: grid;
     grid-template-columns: 5fr 2fr;
-    background-color: #ffffff00;
+    background-color: $bg;
 
     &-search {
         display: flex;
@@ -157,7 +159,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     padding: 5px 5% 10px;
     display: grid;
     grid-template-columns: 5fr 2fr;
-    background-color: #ffffff00;
+    background-color: $bg;
 
 
     &-left {
@@ -191,9 +193,12 @@ body:has(.headerDropMenu:hover) .downBlock {
 
             &-start {
                 @extend %button;
+                color: $button_b;
+                background-color: $button_b_out;
             }
             &-learn {
                 @extend %button_w;
+                color: $button_w;
             }
         }
         &-required {
@@ -223,6 +228,8 @@ body:has(.headerDropMenu:hover) .downBlock {
         &-find {
             margin-top: 10px;
             @extend %button;
+            color: $button_b;
+            background-color: $button_b_out;
         }
         &-option {
             margin-top: 15px;
@@ -236,9 +243,9 @@ body:has(.headerDropMenu:hover) .downBlock {
 }
 // Services section --------------------------------------
 .services {
-    padding: 15px 5%;
-    margin: 20px 0;
-    background-color: #ffffff00;
+    padding: 35px 5% 15px;
+    margin: 0;
+    background-color: $bg;
 
     &-table {
         width: 100%;
@@ -247,9 +254,10 @@ body:has(.headerDropMenu:hover) .downBlock {
         &-row {
             &-td {
                 padding: 15px 0;
-                border: 1px solid #0000002c;
+                border: 1px solid $font_sm_h_soft;
                 text-align: center;
                 @extend %font_sm_h;
+                color: $font_sm_h;
 
                 &-img {
                     width: 100px;
@@ -265,12 +273,13 @@ body:has(.headerDropMenu:hover) .downBlock {
 .success {
     width: 100%;
     height: auto;
-    padding: 0 5%;
-    margin: 45px 0 0;
+    padding: 45px 5% 0;
+    margin: 0;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 60px;
     justify-content: center;
+    background-color: $bg;
 
     .grida {
         margin-top: 70px;
@@ -289,6 +298,7 @@ body:has(.headerDropMenu:hover) .downBlock {
     &-head {
         width: 100%;
         @extend %font_xxl;
+        color: $font_xxl;
         height: 250px;
     }
     &-block {
@@ -305,17 +315,22 @@ body:has(.headerDropMenu:hover) .downBlock {
         
         &-head {
             @extend %font_m;
+            color: $font_m;
         }
         &-info {
             @extend %font_s_h;
+            color: $font_s_h_soft;
         }
         &-buttons {
 
             &-start {
                 @extend %button;
+                color: $button_b;
+                background-color: $button_b_out;
             }
             &-learn {
                 @extend %button_w;
+                color: $button_w;
             }
         }
     }
@@ -327,13 +342,15 @@ body:has(.headerDropMenu:hover) .downBlock {
     height: auto;
     background-color: transparent;
     text-align: center;
-    background-color: #00000013;
+    background-color: $bg;
     
     &-head {
         @extend %font_xxl;
+        color: $font_xxl;
     }
     &-info {
         @extend %font_sm_h;
+        color: $font_sm_h;
     }
     &-block {
         display: flex;
@@ -364,13 +381,14 @@ body:has(.headerDropMenu:hover) .downBlock {
     }
     &-btn {
         @extend %button;
+        color: $button_b;
+        background-color: $button_b_out;
     }
 }
 // footer -------------------------------------------
 .footer {
-    height: 500px;
-    padding: 20px 5% 0;
-    background-color: #000000;
+    padding: 20px 5% 20px;
+    background-color: $bg_footer;
 
     // ------------------- up --------------------------
     &-up {
@@ -386,7 +404,7 @@ body:has(.headerDropMenu:hover) .downBlock {
 
             &-head {
                 @extend %font_sm_h;
-                color: #fff;
+                color: $font_sm_h_w;
             }
 
             &-form {
@@ -394,7 +412,7 @@ body:has(.headerDropMenu:hover) .downBlock {
                 position: relative;
                 &-text {
                     width: 100%;
-                    padding: 13.5px 8px;
+                    padding: 13.5px 170px 13.5px 20px;
                     color: #ffffff;
                     background-color: #1b1b1b;
                     border: none;
@@ -424,7 +442,7 @@ body:has(.headerDropMenu:hover) .downBlock {
             &-head {
                 @extend %font_sm_h;
                 margin: 15px 0 15px;
-                color: #fff;
+                color: $font_sm_h_w;
             }
             &-block {
                 display: flex;
@@ -435,13 +453,13 @@ body:has(.headerDropMenu:hover) .downBlock {
                 &-logo {
                     @extend %logo_big;
                     &-icon-img {
-                        filter: invert(100%);
+                        filter: invert($logo_footer_invert);
                         width: 33px;
                         height: 33px;
                     }
                     &-text {
                         @extend %font_xl;
-                        background-image: linear-gradient(#00a4af, #fff);
+                        background-image: $font_xl_bg;
                         background-clip: text;
                         background-size: cover;
                         color: transparent;
@@ -451,13 +469,47 @@ body:has(.headerDropMenu:hover) .downBlock {
                     padding: 2px;
                     margin: 0 5px 0 0;
                     @extend %font_sm_h;
-                    color: #fff;
+                    color: $font_sm_h_w;
                 }
                 &-forward {
                     transform: rotate(-90deg);
+                    filter: invert($forward_footer_invert);
                     width: 49px;
                     height: 70px;
                     margin: 0;
+                }
+            }
+        }
+    }
+    // ------------- center -------------------
+    &-center {
+        padding: 20px 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            a:nth-child(1) {
+                color: $font_sm_footHead;
+                @extend %font_sm;
+                &:hover {
+                    color: #00a3afb2;
+                }
+            }
+
+            a {
+                @extend %font_ss_h;
+                color: $font_ss_h_footItem;
+                user-select: none;
+                transition: .1s linear;
+                padding-top: 13px;
+                &:hover {
+                    color: #fffffff6;
                 }
             }
         }

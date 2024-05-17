@@ -24,6 +24,12 @@
 }
 
 // fonts ------------------------
+%font_ss_h {
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
 %font_ss {
     font-family: "Poppins", sans-serif;
     font-size: 10px;
@@ -119,7 +125,7 @@
     height: 100%;
     padding: 10px 8px;
     margin: 0;
-    background-color: #8e8e8e;
+    background-color: #ffffffc0;
     color: #000000;
     font-weight: 600;
     border: none;
