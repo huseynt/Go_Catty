@@ -80,7 +80,7 @@ body:has(.headerDropMenu:hover) .downBlock {
                 width: 85px;
                 display: none !important;
                 position: absolute;
-                top: 57px;
+                top: 55px;
                 left: -15px;
                 padding: 12px 20px 18px;
                 background-color: #ffffff;
@@ -404,6 +404,7 @@ body:has(.headerDropMenu:hover) .downBlock {
 
             &-head {
                 @extend %font_sm_h;
+                margin: 15px 0 15px;
                 color: $font_sm_h_w;
             }
 
@@ -452,6 +453,7 @@ body:has(.headerDropMenu:hover) .downBlock {
 
                 &-logo {
                     @extend %logo_big;
+                    text-decoration: none;
                     &-icon-img {
                         filter: invert($logo_footer_invert);
                         width: 33px;
